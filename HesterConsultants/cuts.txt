@@ -1,0 +1,908 @@
+﻿news fly-in/fade-in:
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            if (!!<%=this.DoSlide().ToString() %>)
+                //$(".news").effect("slide", { duration: 1000 });
+                $(".news").animate({backgroundColor: "#ffffe0"}, 3000);
+        });
+    </script>
+
+
+
+
+
+            var flashHtml1 = "<object width=\"800\" height=\"600\"> "
+                + "<param name=\"movie\" value=\"http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf\" /> "
+                + "<param name=\"flashvars\" value=\"src=.%2Fvideos%2Fclient-experience-submit-job.flv&controlBarMode=docked\" /> "
+                + "<param name=\"allowFullScreen\" value=\"true\" /> "
+                + "<param name=\"allowscriptaccess\" value=\"always\" /> "
+                + "<embed src=\"http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"800\" height=\"600\" flashvars=\"src=http%3A%2F%2Flocalhost%3A58273%2Fclient-experience%2Fvideos%2Fclient-experience-submit-job.flv&controlBarMode=docked\"></embed> "
+            + "</object>";
+
+            var flashHtml2 = "<object width=\"800\" height=\"600\"> "
+                + "<param name=\"movie\" value=\"http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf\" /> "
+                + "<param name=\"flashvars\" value=\"src=.%2Fvideos%2Fclient-experience-pick-up-job.flv&controlBarMode=docked\" /> "
+                + "<param name=\"allowFullScreen\" value=\"true\" /> "
+                + "<param name=\"allowscriptaccess\" value=\"always\" /> "
+                + "<embed src=\"http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"800\" height=\"600\" flashvars=\"src=http%3A%2F%2Flocalhost%3A58273%2Fclient-experience%2Fvideos%2Fclient-experience-pick-up-job.flv&controlBarMode=docked\"></embed> "
+            + "</object>";
+
+
+            var mp4Html = "<object classid=\"clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B\" width=\"960\" height=\"760\" codebase=\"http://www.apple.com/qtactivex/qtplugin.cab\"> "
+                + "<param name=\"src\" value=\"./videos/client-experience-submit-job.mp4\" /> "
+                + "<param name=\"autoplay\" value=\"false\" /> "
+                + "<param name=\"controller\" value=\"true\" /> "
+                + "<embed src=\"./videos/client-experience-submit-job.mp4\" width=\"960\" height=\"760\" autoplay=\"false\" controller=\"true\" pluginspage=\"http://www.apple.com/quicktime/download/\"> "
+                + "</embed> "
+                + "</object>";
+
+            var wmvHtml = "<object id=\"mediaPlayer\" width=\"956\" height=\"720\" "
+                + "classid=\"CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95\" "
+                + "codebase=\"http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701\" "
+                + "standby=\"Loading Microsoft Windows Media Player components...\" type=\"application/x-oleobject\"> "
+                + "<param name=\"fileName\" value=\"./videos/client-experience-submit-job.wmv\"> "
+                + "<param name=\"animationatStart\" value=\"true\"> "
+                + "<param name=\"transparentatStart\" value=\"true\"> "
+                + "<param name=\"autoStart\" value=\"false\"> "
+                + "<param name=\"showControls\" value=\"true\"> "
+                + "<param name=\"loop\" value=\"false\"> "
+                + "<embed type=\"application/x-mplayer2\" "
+                + "pluginspage=\"http://microsoft.com/windows/mediaplayer/en/download/\" "
+                + "id=\"mediaPlayer\" name=\"mediaPlayer\" displaysize=\"4\" autosize=\"-1\" "
+                + "bgcolor=\"darkblue\" showcontrols=\"true\" showtracker=\"-1\" "
+                + "showdisplay=\"0\" showstatusbar=\"-1\" videoborder3d=\"-1\" width=\"956\" height=\"720\" "
+                + "src=\"./videos/client-experience-submit-job.mp4\" autostart=\"false\" designtimesp=\"5311\" loop=\"false\"> "
+                + "</embed> "
+                + "</object> ";
+
+
+
+// client login js on home page
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            var usernameInput = "<%=this.UserNameTextBox() %>";
+            var pwInput = "<%=this.PwTextBox() %>";
+
+            if (usernameInput != "" && pwInput != "")
+            {
+
+                if ($("#" + usernameInput).val() == "")
+                {
+                    if (usernameInput != "")
+                        $("#" + usernameInput).get(0).focus();
+                }
+                else
+                {
+                    if (pwInput != "")
+                        $("#" + pwInput).get(0).focus();
+                }
+            }
+        });
+    </script>
+
+
+(Aside: "Normal" may be a bit of a misnomer, because "Image" PDFs may well be more common than "Normal" PDFs, at least at present in the legal field. This may be why Adobe changed the name from "Normal" to "Formatted Text &amp; Graphics", which is more descriptive and certainly takes up more space.)
+
+
+
+// old biglogin
+            $(".bigLogin").mouseover(function ()
+            {
+                //$(this).css("background-color", "#cccccc");
+                //$(this).find("a").css("text-decoration", "underline");
+                $(this).css("background-image", "url('/style/hcblue/images/hc-blue-button-bg.png')");
+            });
+
+            $(".bigLogin").mouseout(function ()
+            {
+                //$(this).find("a").css("text-decoration", "none");
+                $(this).css("background-image", "url('/style/hcblue/images/hc-gray-button-bg.png')");
+            });
+
+            $(".bigLogin").click(function (e)
+            {
+                e.preventDefault();
+                window.location = $(this).find("a").attr("href");
+            });
+
+
+// old file divs
+            if (returnedFiles != null)
+            {
+                foreach (JobFile returnFile in returnedFiles)
+                {
+                    Panel pnlFile = new Panel();
+
+                    LiteralControl fileWithImg = null;
+                    if (!curJob.IsArchived)
+                        fileWithImg = new LiteralControl(AdminUtils.LinkToGetFilePage_Image() + "&nbsp;" + AdminUtils.LinkToGetFilePage_Text(returnFile));
+                    else // archived - no link
+                        fileWithImg = new LiteralControl(AdminUtils.FileIcon() + "&nbsp;" + returnFile.Name + " (archived)");
+                    pnlFile.Controls.Add(fileWithImg);
+
+                    phReturnFiles.Controls.Add(pnlFile);
+                    pnlReturnFiles.Visible = true;
+                }
+            }
+
+
+// old home.aspx link to job.aspx via qs:
+<asp:HyperLink runat="server" ID="hlJob" NavigateUrl='<%# Eval("JobId", "/clients/Job.aspx?jobId={0}") %>'>Inspect</asp:HyperLink>
+
+// old job search query:
+        public DataTable JobsFromSearchTermDataTable(int clientId, List<string> terms)
+        {
+            SqlConnection conn = new SqlConnection(clientConnectionString);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+
+            if (terms.Count == 0)
+                return null;
+
+            List<int> jobIds = new List<int>();
+
+            // see if user is searching for any job numbers
+            foreach (string term in terms)
+            {
+                // if the search term is a positive int,
+                // put it in jobIds (but also keep it in string search terms)
+                int num = 0;
+                bool isNum = Int32.TryParse(term, out num);
+                if (num > 0)
+                    jobIds.Add(num);
+            }
+
+            StringBuilder sbSql = new StringBuilder();
+
+            int k = 0;
+            bool hasJobIds = false;
+            if (jobIds.Count > 0)
+            {
+                hasJobIds = true;
+
+                // SearchType is to distinguish jobId searches (more relevant)
+                // from text searches
+                sbSql.Append("SELECT *, 1 AS SearchType FROM Jobs");
+                sbSql.Append(" WHERE (ClientId = @ClientId) AND (");
+                foreach (int jobId in jobIds)
+                {
+                    if (k > 0)
+                        sbSql.Append(" OR ");
+
+                    sbSql.Append("JobId = @JobId" + k++.ToString());
+                }
+
+                sbSql.Append(")");
+
+                // do a UNION if any ints
+                // if we're doing a jobid, we're doing both kinds
+                // because we'll search jobid and instructions for a jobid
+                sbSql.Append(" UNION ");
+            }
+
+            sbSql.Append("SELECT *, 2 AS SearchType FROM Jobs WHERE (ClientId = @ClientId) AND (");
+            
+            // filter out ones we already found by jobid
+            if (hasJobIds)
+            {
+                k = 0;
+                foreach (int jobId in jobIds)
+                {
+                    if (k > 0)
+                        sbSql.Append(" AND ");
+
+                    sbSql.Append("JobId <> @JobId" + k++.ToString());
+                }
+                sbSql.Append(") AND (");
+            }
+
+            // search all terms in instructions
+            k = 0;
+            foreach (string term in terms)
+            {
+                if (k > 0)
+                    sbSql.Append(" OR ");
+
+                sbSql.Append("(Instructions LIKE '%' + @Term" + k++.ToString() + "+ '%'");
+                //sbSql.Append(" OR 
+            }
+
+            sbSql.Append(")");
+
+            sbSql.Append(" ORDER BY SearchType;"); // matching job # first
+            Debug.WriteLine(sbSql.ToString());
+
+            cmd.CommandText = sbSql.ToString();
+
+            // parameters
+            cmd.Parameters.AddWithValue("@ClientId", clientId);
+
+            k = 0;
+            foreach (int jobId in jobIds)
+                cmd.Parameters.AddWithValue("@JobId" + k++.ToString(), jobId);
+
+            k = 0;
+            foreach (string term in terms)
+                cmd.Parameters.AddWithValue("@Term" + k++.ToString(), term);
+
+            SqlDataAdapter daRecentJobs = new SqlDataAdapter(cmd);
+            DataTable dtRecentJobs = new DataTable();
+
+            try
+            {
+                daRecentJobs.Fill(dtRecentJobs);
+            }
+            catch (Exception ex)
+            {
+                LogErrorAndSendAlert(ex);
+            }
+            finally
+            {
+                if (conn.State != ConnectionState.Closed)
+                    conn.Close();
+            }
+
+            return dtRecentJobs;
+        }
+
+
+
+// time zone note animation:
+                $("#<%=this.txtDateDue.ClientID %>").blur(function ()
+                {
+                    $("#lblUserTimeZoneNote").animate(
+                        { color: "#0080ff" },
+                        { duration: 500, complete: function ()
+                        {
+                            $("#lblUserTimeZoneNoteLeft").animate({ color: "#666666" }, 2000);
+                            $("#lblUserTimeZoneNoteRight").animate(
+                                    { color: "#666666" },
+                                    {
+                                        duration: 2000,
+                                        complete: function ()
+                                        {
+                                            $("#<%=this.lblUserTimeZone.ClientID %>").animate({ color: "#666666" }, 4000);
+                                        }
+                                    }
+                                );
+                            
+                        }
+                        }
+                    );
+                });
+
+
+// old contact js
+        function focusForm()
+        {
+            var txtName = document.getElementById("<%=this.txtName.ClientID %>");
+            var txtSubject = document.getElementById("<%=this.txtSubject.ClientID %>");
+            
+            // check that it's not display:none
+            var styleAttr = txtName.getAttribute("style");
+            if (!!styleAttr && styleAttr.indexOf("none") == -1)
+            if (!<%=this.loggedInClient.ToString().ToLower() %>)
+                txtName.focus();
+            else
+                txtSubject.focus();
+        }
+
+
+
+// new user wiz animation:
+    <script type="text/javascript">
+
+        $(document).ready(function ()
+        {
+            var showedTransfer = false;
+            var controlId = "<%=this.PasswordControlId() %>";
+
+            if (!!($(controlId)))
+            {
+                $("#" + controlId).focus(function ()
+                {
+                    if (!showedTransfer)
+                    {
+                        $("#" + controlId).effect("transfer", { to: "#lblPasswordNote" }, 800, pwNoteGlow);
+                    }
+                    showedTransfer = true;
+                });
+            }
+
+            function pwNoteGlow()
+            {
+                $("#lblPasswordNote").animate({ color: "#0080ff" }, 1000, pwNoteUnglow);
+            }
+
+            function pwNoteUnglow()
+            {
+                $("#lblPasswordNote").animate({ color: "#666666" }, 2000, backToPw);
+            }
+
+            function backToPw()
+            {
+                $("#lblPasswordNote").effect("transfer", { to: "#" + controlId }, 500);
+            }
+        });
+    </script>
+	
+	
+editaccount.aspx time zone animation:
+	        var curState;
+
+            $("#<%=txtState.ClientID %>").focus(function ()
+            {
+                curState = $(this).val();
+            });
+
+            $("#<%=txtState.ClientID %>").blur(function ()
+            {
+                if ($(this).val() == curState)
+                    return;
+
+                // transfer
+                $("#<%=txtState.ClientID %>").effect("transfer", { to: "#<%=ddTimezones.ClientID %>" }, 500);
+
+                // set tz
+                $.ajax(
+                {
+                    url: "./TimeZoneHelper.aspx",
+                    dataType: "text",
+                    data: { "state": $("#<%=txtState.ClientID %>").val().toLowerCase() },
+                    success: function (ret)
+                    {
+                        try
+                        {
+                            $("#<%=ddTimezones.ClientID %>").val(ret);
+                        }
+                        catch (e)
+                        {
+                            // do nothing
+                        }
+                    }
+                });
+
+                $("#<%=ddTimezones.ClientID %>").animate({ color: "#ff0000" }, 1000, showWarningAndReset);
+
+                curState = $(this).val();
+            });
+
+            function showWarningAndReset()
+            {
+                // show exhortation
+                $("#<%=lblTimezoneExhortation.ClientID %>").show(100);
+
+                // set flag back to false
+                //stateChanged = false;
+            }
+
+
+// fader js:
+        var sloganFader;
+        var faderStyleRefs;
+        var startColor;
+        var endColor;
+        var seconds = 1;
+        var increments = 20;
+        
+        function initFaderElements()
+        {
+            faderStyleRefs = new Array(document.getElementById("slogan").style);
+        }
+        
+        function fadeInSlogan1()
+        {
+            startColor = "#00aaee";
+            endColor = "#f77f00";
+            sloganFader = new Fader("sloganFader", "color", faderStyleRefs, startColor, endColor, seconds, increments, fadeInSlogan2);
+            sloganFader.fade();
+        }
+
+        function fadeInSlogan2()
+        {
+            startColor = "#f77f00";
+            endColor = "#ff00ff";
+            sloganFader = new Fader("sloganFader", "color", faderStyleRefs, startColor, endColor, seconds, increments, fadeInSlogan3);
+            sloganFader.fade();
+        }
+
+        function fadeInSlogan3()
+        {
+            startColor = "#ff00ff";
+            endColor = "#ffffff";
+            sloganFader = new Fader("sloganFader", "color", faderStyleRefs, startColor, endColor, seconds, increments, setSloganFaderCookie);
+            sloganFader.fade();
+        }
+
+        function setSloganFaderCookie()
+        {
+            var cookie = new Cookie("hcv1");
+            cookie.sloganFader = true;
+            cookie.store(60 * 60 * 24, "/");
+        }
+
+        function fadeCookieExists()
+        {
+            var fadeCookie = new Cookie("hcv1");
+            return !!fadeCookie.sloganFader;
+        }
+
+        function init()
+        {
+            alert(document.cookie);
+            initFaderElements();
+            if (!fadeCookieExists())
+                fadeInSlogan1();
+            else
+                alert("it exists?");
+        }
+    
+// ------------------ end of fader js
+
+
+// -------- fader
+function Fader(name, prop, styleRefs, startCol, endCol, seconds, increments, nextFunc) 
+{
+	// name s/b same as variable name - need this string for setTimeout
+	// prop s/b valid css prop, e.g., "color", "backgroundColor" etc.
+	// styleRefs s/b array of style objs, e.g., document.all.mainbody.style
+	// startCol and endCol are hex strings - 
+	// startCol s/b current col, e.g., pass current, not string literal
+	// seconds is fade time
+	// increments is number of increments, more = smoother
+	// nextFunc is function to call when fade is complete
+	this.name = name;
+	this.prop = prop;
+	this.styleRefs = styleRefs;
+	this.curRed = getRed(startCol);
+	this.curGreen = getGreen(startCol);
+	this.curBlue = getBlue(startCol);
+	this.fRed = getRed(endCol);
+	this.fGreen = getGreen(endCol);
+	this.fBlue = getBlue(endCol);
+	this.interval = seconds / increments * 1000;
+	this.redIncr = (this.fRed - this.curRed) / increments;
+	this.greenIncr = (this.fGreen - this.curGreen) / increments;
+	this.blueIncr = (this.fBlue - this.curBlue) / increments;
+	this.redDone = false;
+	this.greenDone = false;
+	this.blueDone = false;
+	if (!!nextFunc) this.nextFunc = nextFunc;
+}
+
+function FaderSetStyleRefs(s) 
+{
+	this.styleRefs = s;
+}
+
+function FaderSetInterval(secs, incr) 
+{
+	this.interval = secs / incr * 1000;
+}
+
+function FaderFade() 
+{
+	if (this.styleRefs.length == 0) return;
+
+	if (!(this.redDone)) 
+	{
+		if ((this.redIncr == 0) ||
+			(this.redIncr > 0 && this.curRed + this.redIncr >= this.fRed) ||
+			(this.redIncr < 0 && this.curRed + this.redIncr <= this.fRed)) 
+		{
+			this.curRed = this.fRed;
+			this.redDone = true;
+		}
+		else this.curRed += this.redIncr;
+	}
+
+	if (!(this.greenDone)) 
+	{
+		if ((this.greenIncr == 0) ||
+			(this.greenIncr > 0 && this.curGreen + this.greenIncr >= this.fGreen) ||
+			(this.greenIncr < 0 && this.curGreen + this.greenIncr <= this.fGreen)) 
+		{
+			this.curGreen = this.fGreen;
+			this.greenDone = true;
+		}
+		else this.curGreen += this.greenIncr;
+	}
+
+	if (!(this.blueDone)) 
+	{
+		if ((this.blueIncr == 0) ||
+			(this.blueIncr > 0 && this.curBlue + this.blueIncr >= this.fBlue) ||
+			(this.blueIncr < 0 && this.curBlue + this.blueIncr <= this.fBlue)) 
+		{
+			this.curBlue = this.fBlue;
+			this.blueDone = true;
+		}
+		else this.curBlue += this.blueIncr;
+	}
+
+	for (var k = 0; k < this.styleRefs.length; k++)
+	{
+	    eval("this.styleRefs[k]." + this.prop + " = getHex(this.curRed, this.curGreen, this.curBlue);");
+	    //alert(this.styleRefs[k].toString() + "." + this.prop + " = " + getHex(this.curRed, this.curGreen, this.curBlue).toString());
+	}
+
+	if (!(this.redDone) || !(this.greenDone) || !(this.blueDone)) 
+	{
+		window.setTimeout(this.name + ".fade();", this.interval);
+	}
+	else 
+	{
+		if (!!this.nextFunc) this.nextFunc();
+	}
+}
+
+Fader.prototype.setStyleRefs = FaderSetStyleRefs;
+Fader.prototype.setInterval = FaderSetInterval;
+Fader.prototype.fade = FaderFade;
+
+function getHex(r, g, b) 
+{
+	var s = "#";
+	var rS = new Number(parseInt(r)).toString(16);
+	if (rS.length == 1) rS = "0" + rS;
+	var gS = new Number(parseInt(g)).toString(16);
+	if (gS.length == 1) gS = "0" + gS;
+	var bS = new Number(parseInt(b)).toString(16);
+	if (bS.length == 1) bS = "0" + bS;
+	s += rS + gS + bS;
+	return s;
+}
+
+function getRed(hexVal) 
+{
+	if (hexVal.charAt(0) == "#") 
+		hexVal = hexVal.substring(1);
+	return parseInt(hexVal.substring(0, 2), 16);
+}
+
+function getGreen(hexVal) 
+{
+	if (hexVal.charAt(0) == "#") 
+		hexVal = hexVal.substring(1);
+	return parseInt(hexVal.substring(2, 4), 16);
+}
+
+function getBlue(hexVal) 
+{
+	if (hexVal.charAt(0) == "#") 
+		hexVal = hexVal.substring(1);
+	return parseInt(hexVal.substring(4, 6), 16);
+}
+
+// ----------------------------------------------- Cookie:
+// Cookie code from Flanagan, JavaScript, The Definitive Guide, 5th Ed.
+
+/**
+ * This is the Cookie() constructor function.
+ *
+ * This constructor looks for a cookie with the specified name for the
+ * current document.  If one exists, it parses its value into a set of
+ * name/value pairs and stores those values as properties of the newly created
+ * object.
+ *
+ * To store new data in the cookie, simply set properties of the Cookie
+ * object.  Avoid properties named "store" and "remove" since these are 
+ * reserved as method names.
+ * 
+ * To save cookie data in the web browser's local store, call store().
+ * To remove cookie data from the browser's store, call remove().
+ *
+ * The static method Cookie.enabled() returns true if cookies are
+ * enabled and returns false otherwise.
+ */
+function Cookie(name) {
+    this.$name = name;  // Remember the name of this cookie
+
+    // First, get a list of all cookies that pertain to this document
+    // We do this by reading the magic Document.cookie property
+    // If there are no cookies, we don't have anything to do 
+    var allcookies = document.cookie;
+    if (allcookies == "") return;
+
+    // Break the string of all cookies into individual cookie strings
+    // Then loop through the cookie strings, looking for our name
+    var cookies = allcookies.split(';');
+    var cookie = null;
+    for(var i = 0; i < cookies.length; i++) {
+        // Does this cookie string begin with the name we want?
+        if (cookies[i].substring(0, name.length+1) == (name + "=")) {
+            cookie = cookies[i];
+            break;
+        }
+    }
+
+    // If we didn't find a matching cookie, quit now
+    if (cookie == null) return;
+
+    // The cookie value is the part after the equals sign
+    var cookieval = cookie.substring(name.length+1);
+
+    // Now that we've extracted the value of the named cookie, we
+    // must break that value down into individual state variable 
+    // names and values. The name/value pairs are separated from each
+    // other by ampersands, and the individual names and values are
+    // separated from each other by colons. We use the split() method
+    // to parse everything.
+    var a = cookieval.split('&'); // Break it into an array of name/value pairs
+    for(var i=0; i < a.length; i++)  // Break each pair into an array
+        a[i] = a[i].split(':');
+
+    // Now that we've parsed the cookie value, set all the names and values
+    // as properties of this Cookie object. Note that we decode
+    // the property value because the store() method encodes it
+    for(var i = 0; i < a.length; i++) {
+        this[a[i][0]] = decodeURIComponent(a[i][1]);
+    }
+}
+
+/**
+ * This function is the store() method of the Cookie object.
+ *
+ * Arguments:
+ *
+ *   daysToLive: the lifetime of the cookie, in days. If you set this
+ *     to zero, the cookie will be deleted.  If you set it to null, or 
+ *     omit this argument, the cookie will be a session cookie and will
+ *     not be retained when the browser exits.  This argument is used to
+ *     set the max-age attribute of the cookie.
+ *   // kah - note, I changed it to secondsToLive
+ *   path: the value of the path attribute of the cookie
+ *   domain: the value of the domain attribute of the cookie
+ *   secure: if true, the secure attribute of the cookie will be set
+ */
+Cookie.prototype.store = function(secondsToLive, path, domain, secure) {
+    // First, loop through the properties of the Cookie object and
+    // put together the value of the cookie. Since cookies use the
+    // equals sign and semicolons as separators, we'll use colons
+    // and ampersands for the individual state variables we store 
+    // within a single cookie value. Note that we encode the value
+    // of each property in case it contains punctuation or other
+    // illegal characters.
+    var cookieval = "";
+    for(var prop in this) {
+        // Ignore properties with names that begin with '$' and also methods
+        if ((prop.charAt(0) == '$') || ((typeof this[prop]) == 'function')) 
+            continue;
+        if (cookieval != "") cookieval += '&';
+        cookieval += prop + ':' + encodeURIComponent(this[prop]);
+    }
+
+    // Now that we have the value of the cookie, put together the 
+    // complete cookie string, which includes the name and the various
+    // attributes specified when the Cookie object was created
+    var cookie = this.$name + '=' + cookieval;
+    if (secondsToLive || secondsToLive == 0) { 
+        cookie += "; max-age=" + (secondsToLive);
+    }
+
+    if (path) cookie += "; path=" + path;
+    if (domain) cookie += "; domain=" + domain;
+    if (secure) cookie += "; secure";
+
+    // Now store the cookie by setting the magic Document.cookie property
+    document.cookie = cookie;
+}
+
+/**
+ * This function is the remove() method of the Cookie object; it deletes the
+ * properties of the object and removes the cookie from the browser's 
+ * local store.
+ * 
+ * The arguments to this function are all optional, but to remove a cookie
+ * you must pass the same values you passed to store().
+ */
+Cookie.prototype.remove = function(path, domain, secure) {
+    // Delete the properties of the cookie
+    for(var prop in this) {
+        if (prop.charAt(0) != '$' && typeof this[prop] != 'function') 
+            delete this[prop];
+    }
+
+    // Then, store the cookie with a lifetime of 0
+    this.store(0, path, domain, secure);
+}
+
+/**
+ * This static method attempts to determine whether cookies are enabled.
+ * It returns true if they appear to be enabled and false otherwise.
+ * A return value of true does not guarantee that cookies actually persist.
+ * Nonpersistent session cookies may still work even if this method 
+ * returns false.
+ */
+Cookie.enabled = function() {
+    // Use navigator.cookieEnabled if this browser defines it
+    if (navigator.cookieEnabled != undefined) return navigator.cookieEnabled;
+
+    // If we've already cached a value, use that value
+    if (Cookie.enabled.cache != undefined) return Cookie.enabled.cache;
+
+    // Otherwise, create a test cookie with a lifetime
+    document.cookie = "testcookie=test; max-age=10000";  // Set cookie
+
+    // Now see if that cookie was saved
+    var cookies = document.cookie;
+    if (cookies.indexOf("testcookie=test") == -1) {
+        // The cookie was not saved
+        return Cookie.enabled.cache = false;
+    }
+    else {
+        // Cookie was saved, so we've got to delete it before returning
+        document.cookie = "testcookie=test; max-age=0";  // Delete cookie
+        return Cookie.enabled.cache = true;
+    }
+}
+// ----------------------------------------- end of Cookie
+
+
+
+
+
+                <%-- finished jobs -------------------------------------------------------%>
+                <asp:Panel runat="server" ID="pnlFinishedJobs">
+                    <h2>Completed Work Requests</h2>
+                    <asp:ListView 
+                        runat="server" 
+                        ID="pnlCompletedJobs"
+                        DataSourceID="odsFinishedJobs"
+                        ItemPlaceholderID="tbFinishedJobs">
+                    
+                        <LayoutTemplate>
+                            <table class="openJobs">
+                                <thead>
+                                    <th>Job No.</th>
+                                    <th>Job Type</th>
+                                    <th>Instructions</th><%-- use css ellipsis thing --%>
+                                    <th>Status</th>
+                                    <th></th><%-- cancel, modify, send note, etc. (can't modify while in progress) --%>
+                                </thead>
+                                <tbody runat="server" ID="tbFinishedJobs"></tbody>
+                            </table>
+                        </LayoutTemplate>
+
+                        <ItemTemplate>
+                            <tr>
+                                <td><%# Eval("JobId") %></td>
+                                <td><%# Eval("JobType.Name") %></td>
+                                <td style="width: 30px;" class="overflowEllipsis"><%# Eval("Instructions") %></td>
+                                <td><%# Eval("JobStatus.Name") %></td>
+                                <td><a href="">Pick up</a></td>
+                            </tr>
+                        </ItemTemplate>
+
+                        <EmptyDataTemplate>
+                            <tr>
+                                <td>(No current jobs to pick up.)</td>
+                            </tr>
+                        </EmptyDataTemplate>
+                    </asp:ListView>
+                </asp:Panel>
+
+<asp:ObjectDataSource 
+    runat="server" 
+    ID="odsFinishedJobs"
+    DataObjectTypeName="HesterConsultants.AppCode.Entities.Job"
+    TypeName="HesterConsultants.AppCode.CacheLayer"
+    SelectMethod="JobsToPickUp" 
+    onselecting="odsFinishedJobs_Selecting">
+
+    <SelectParameters>
+        <asp:Parameter Name="client" Type="Object" />
+    </SelectParameters>
+</asp:ObjectDataSource>
+
+
+
+
+            <asp:CreateUserWizard ID="userWiz" runat="server"
+                CreateUserButtonText="Create Account" 
+                RequireEmail="false" oncreatinguser="userWiz_CreatingUser" 
+                oncreateduser="userWiz_CreatedUser">
+
+                <WizardSteps>
+                    <asp:CreateUserWizardStep ID="step1" runat="server">
+                        <ContentTemplate>
+                            <table>
+                                <tr>
+                                    <td colspan="2"><b>Register for your new account:</b></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; white-space: nowrap;">
+                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Email address:</asp:Label></td>
+                                    <td>
+                                        <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="Email address is required." ValidationGroup="userWiz">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; white-space: nowrap;">
+                                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password<span class="asterisk">*</span>:</asp:Label></td>
+                                    <td>
+                                        <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="userWiz">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; white-space: nowrap;">
+                                        <asp:Label ID="ConfirmPasswordLabel" runat="server" AssociatedControlID="ConfirmPassword">Confirm Password:</asp:Label></td>
+                                    <td>
+                                        <asp:TextBox ID="ConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server" ControlToValidate="ConfirmPassword" ErrorMessage="Confirm Password is required." ToolTip="Confirm Password is required." ValidationGroup="userWiz">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; white-space: nowrap;">
+                                        <asp:Label ID="QuestionLabel" runat="server" AssociatedControlID="Question">Security Question:</asp:Label></td>
+                                    <td>
+                                        <asp:TextBox ID="Question" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="QuestionRequired" runat="server" ControlToValidate="Question" ErrorMessage="Security question is required." ToolTip="Security question is required." ValidationGroup="userWiz">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; white-space: nowrap;">
+                                        <asp:Label ID="AnswerLabel" runat="server" AssociatedControlID="Answer">Security Answer:</asp:Label></td>
+                                    <td>
+                                        <asp:TextBox ID="Answer" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="AnswerRequired" runat="server" ControlToValidate="Answer" ErrorMessage="Security answer is required." ToolTip="Security answer is required." ValidationGroup="userWiz">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">                            <span class="asterisk">*</span> Password must be at least 7 characters, with at least one non-alphanumeric character.
+                                    <asp:RegularExpressionValidator runat="server" ID="EmailExpressionValidator" ControlToValidate="UserName" ValidationExpression="[a-zA-Z_0-9.-]+\@[a-zA-Z_0-9.-]+\.\w+" ErrorMessage="* Please enter a valid email address."></asp:RegularExpressionValidator>
+                                    <br />
+
+                                    <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="Dynamic" ErrorMessage="* The Password and Confirmation Password must match." ValidationGroup="userWiz"></asp:CompareValidator>
+
+                                    <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False"></asp:Literal>
+</td>
+                                </tr>
+                            </table>
+                        </ContentTemplate>
+                    </asp:CreateUserWizardStep>
+
+                    <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
+                    </asp:CompleteWizardStep>
+                </WizardSteps>
+            </asp:CreateUserWizard>
+
+
+
+
+
+
+demos image rollover:
+    <script type="text/javascript">
+        var imgRegularSrc = null;
+        var imgRollover;
+        
+        function loadRolloverImage()
+        {
+            imgRollover = new Image();
+            imgRollover.src = "/images/new_video_demos_rollover.png";
+        }
+        
+        function rollover(img)
+        {
+            if (imgRegularSrc == null)
+                imgRegularSrc = img.src;
+                
+            if (img.src == imgRegularSrc)
+                img.src = imgRollover.src;
+            else
+                img.src = imgRegularSrc;
+        }
+    </script>
+
+        <!--<div style="text-align: center; width: 100%;">
+        <div class="newSplash" style="width: 392px; margin: auto;">
+        <a href="/demos/"><img src="/images/new_video_demos.png" width="388" height="153" alt="New! Video demos - Click here!" onmouseover="rollover(this)" onmouseout="rollover(this)" /></a>
+        </div>
+        </div>-->
+

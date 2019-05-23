@@ -1,0 +1,19 @@
+<forum>
+	<message messageId="1" />
+		<message messageId="2" />
+	<message messageId="3" />
+</forum>
+
+
+
+reply = parentMessage.nodes.add()
+new topic = forum.nodes.add()
+
+
+WriteMessageNode(node)
+	"<div class="message">" + GetMessage(id) + "</div>";
+	foreach (Message child node)
+		WriteMessageNode(child node)
+
+GetMessage(messageId)
+	// get stuff from db

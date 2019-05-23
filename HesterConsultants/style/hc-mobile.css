@@ -1,0 +1,16 @@
+﻿@media handheld
+{
+    html
+    {
+        margin: 0;
+        padding: 2px;
+    }
+    
+    /* ads --------------------------------------------------------------- */
+
+    #adPanelRight, #adPanelBottom, .adHeading
+    {
+        display: none;
+    }
+    
+}

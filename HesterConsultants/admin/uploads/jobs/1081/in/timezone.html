@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+function showOffsets()
+{
+	var today = new Date();
+	var year = today.getYear();
+	var s = "<div>";
+	var lowestTzo = 1000;
+	for (var m = 0; m < 12; m++)
+	{
+		var dt = new Date(year, m, 1, 0, 0, 0, 0);
+		//dt.setMonth(m);
+		//dt.setDate(1);
+		var curTzo = dt.getTimezoneOffset();
+		s += m.toString() + " " + dt.toString() + ": " + curTzo + "<br />";
+	}
+	s += "</div>";
+	document.getElementById("placeholder").innerHTML = s;
+}
+</script>
+</head>
+<body onload="showOffsets()">
+<div id="placeholder"></div>
+</body>
+</html>

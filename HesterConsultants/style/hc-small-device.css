@@ -1,0 +1,16 @@
+﻿@media only screen and (max-device-width: 480px) 
+{
+    div#mainbody
+    {
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    /* ads --------------------------------------------------------------- */
+
+    #adPanelRight, #adPanelBottom, .adHeading
+    {
+        display: none;
+    }
+    
+}

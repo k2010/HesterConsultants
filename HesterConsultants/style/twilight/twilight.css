@@ -1,0 +1,50 @@
+.twilight-wrapper {
+	width: 934px; /* 957px; */
+	margin: auto; /* 0 auto; */
+}
+.slide-wrapper {
+	position: relative;
+	margin-left: 10px;
+}
+.twilight-show {
+	width: 934px; /* 957px */
+	height: 531px; /* 531px */
+	overflow: hidden;
+	position: relative;
+}
+.twilight-show .twilight-box {
+	position: relative;
+	width: 99999px;
+	opacity: 1;
+	-webkit-transition-duration: 0s;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-property: -webkit-transform, opacity;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.twilight-show a {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+.twilight-show .twilight-box div {
+	float: left;
+	opacity: 1;
+	-webkit-transition-duration: 0s;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-property: -webkit-transform, opacity;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.twilight-show .arrow-left,
+.twilight-show .arrow-right {
+	position: absolute;
+	z-index: 10;
+	top: 238px; /* 220px; */
+	cursor: pointer;
+}
+.twilight-show .arrow-left {
+	left: 20px;
+}
+.twilight-show .arrow-right {
+	left: 861px; /* 880px; */
+}

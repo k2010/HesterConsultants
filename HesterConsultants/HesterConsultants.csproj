@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59A71F16-5EFB-457D-BC41-D90FE2D2C425}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HesterConsultants</RootNamespace>
+    <AssemblyName>HesterConsultants</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="WebPageSecurity">
+      <HintPath>..\..\..\..\..\Downloads\Ventaur\CSharp\bin\WebPageSecurity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about\Default.aspx" />
+    <Content Include="about\Privacy.aspx" />
+    <Content Include="admin\AuthUserManage.aspx" />
+    <Content Include="admin\AuthUsers.aspx" />
+    <Content Include="admin\Cache.aspx" />
+    <Content Include="admin\ClientAdmin.aspx" />
+    <Content Include="admin\ClientMessage.aspx" />
+    <Content Include="admin\ClientMessageTemplates.aspx" />
+    <Content Include="admin\Clients.aspx" />
+    <Content Include="admin\CreateInvoice.aspx" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\Employees.aspx" />
+    <Content Include="admin\GetJobStatusIsClosed.aspx" />
+    <Content Include="admin\InvoiceAdmin.aspx" />
+    <Content Include="admin\JobAdmin.aspx" />
+    <Content Include="admin\reports\Default.aspx" />
+    <Content Include="admin\reports\Hits.aspx" />
+    <Content Include="admin\reports\Sessions.aspx" />
+    <Content Include="admin\uploads\jobs\1081\in\timezone.html" />
+    <Content Include="admin\uploads\jobs\1081\out\forum_notes.txt" />
+    <Content Include="admin\uploads\jobs\1083\in\forum_notes.txt" />
+    <Content Include="admin\uploads\jobs\1086\in\Document_Icon.jpg" />
+    <Content Include="admin\uploads\jobs\1086\in\file.png" />
+    <Content Include="admin\uploads\jobs\1087\in\Document_Icon.jpg" />
+    <Content Include="admin\uploads\jobs\1087\in\file.png" />
+    <Content Include="admin\uploads\mail\inwc0355opdmsw552isich55\raul_2011_04_27_21_11_29_message.html" />
+    <Content Include="admin\Utilities.aspx" />
+    <Content Include="client-experience\Default.aspx" />
+    <Content Include="client-experience\Slideshow.aspx" />
+    <Content Include="client-experience\images\arrow-left.png" />
+    <Content Include="client-experience\images\arrow-right.png" />
+    <Content Include="client-experience\images\calendar.png" />
+    <Content Include="client-experience\images\client-home.png" />
+    <Content Include="client-experience\images\conversion-options.png" />
+    <Content Include="client-experience\images\job-pickup.png" />
+    <Content Include="client-experience\images\new-work-request.png" />
+    <Content Include="client-experience\videos\client-experience-pick-up-job.png" />
+    <Content Include="client-experience\videos\client-experience-submit-job.png" />
+    <Content Include="client-experience\videos\client-experience-submit-job.flv" />
+    <Content Include="client-experience\videos\client-experience-pick-up-job.flv" />
+    <Content Include="clients\Account.aspx" />
+    <Content Include="clients\AddressList.aspx" />
+    <Content Include="clients\ChangePassword.aspx" />
+    <Content Include="clients\CompanyList.aspx" />
+    <Content Include="clients\Default.aspx" />
+    <Content Include="clients\GetFile.aspx" />
+    <Content Include="clients\Home.aspx" />
+    <Content Include="clients\Job.aspx" />
+    <Content Include="clients\JobSearch.aspx" />
+    <Content Include="clients\Logout.aspx" />
+    <Content Include="clients\NewJob.aspx" />
+    <Content Include="clients\Profile.aspx" />
+    <Content Include="clients\TimeZoneHelper.aspx" />
+    <Content Include="clients\uploads\mail\ccbq54y0cp031gqesm5ye4ie\raul_2011_04_06_22_55_46_message.html" />
+    <Content Include="clients\web.config" />
+    <Content Include="controls\ConversionEditingOptionsHelp.ascx" />
+    <Content Include="controls\Privacy.ascx" />
+    <Content Include="controls\AboutThePrincipal.ascx" />
+    <Content Include="controls\AdminControlPanel.ascx" />
+    <Content Include="controls\Agreements.ascx" />
+    <Content Include="controls\ClientControlPanel.ascx" />
+    <Content Include="contact\Default.aspx" />
+    <Content Include="controls\HalfHourDropDown.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="demos\Default.aspx" />
+    <Content Include="employees\Default.aspx" />
+    <Content Include="employees\GetEmployeeDateTime.aspx" />
+    <Content Include="employees\GetFile.aspx" />
+    <Content Include="employees\JobSearchAdmin.aspx" />
+    <Content Include="employees\web.config" />
+    <Content Include="employees\Work.aspx" />
+    <Content Include="favicons\h-2012-09-08.ico" />
+    <Content Include="favicons\h-2012-09-08.png" />
+    <Content Include="Global.asax" />
+    <Content Include="images\file_trans.png" />
+    <Content Include="images\mos-master-2003.png" />
+    <Content Include="images\mos-master-2007.png" />
+    <Content Include="scripts\googleAnalytics.js" />
+    <Content Include="scripts\twilight\twilight.min.js" />
+    <Content Include="style\hc-ie7.css" />
+    <Content Include="style\hc-mobile.css" />
+    <Content Include="style\hc-small-device.css" />
+    <Content Include="style\hcblue\images\hc-blue-button-bg.png" />
+    <Content Include="style\hcblue\images\hc-blue-grad.png" />
+    <Content Include="style\hcblue\images\hc-gray-bg.png" />
+    <Content Include="images\mcad.png" />
+    <Content Include="images\mcad_120.png" />
+    <Content Include="images\mcas.png" />
+    <Content Include="images\mos_2007_345.png" />
+    <Content Include="images\mos_master_2003_372.png" />
+    <Content Include="images\ui-anim_basic_16x16.gif" />
+    <Content Include="login\Default.aspx" />
+    <Content Include="login\Handler.aspx" />
+    <Content Include="NewClient\Default.aspx" />
+    <Content Include="scripts\hc.js" />
+    <Content Include="scripts\hcJq.js" />
+    <Content Include="scripts\hc_client_vals.js" />
+    <Content Include="scripts\jquery-1.4.1.min.js" />
+    <Content Include="scripts\jquery-ui-1.8.11.custom.min.js" />
+    <Content Include="scripts\SessionValuesUpdater.aspx" />
+    <Content Include="services\Default.aspx" />
+    <Content Include="style\hc.css" />
+    <Content Include="style\hcblue\images\hc-gray-button-bg.png" />
+    <Content Include="style\hcblue\images\hc-gray-grad-small.png" />
+    <Content Include="style\hcblue\images\hc-green-grad.png" />
+    <Content Include="style\hcblue\images\hc-orange-bg.png" />
+    <Content Include="style\hcblue\images\hc-orange-grad.png" />
+    <Content Include="style\hcblue\images\right-arrow.png" />
+    <Content Include="style\hcblue\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="style\hcblue\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="style\hcblue\images\ui-bg_glass_25_ff8000_1x400.png" />
+    <Content Include="style\hcblue\images\ui-bg_glass_75_0080ff_1x400.png" />
+    <Content Include="style\hcblue\images\ui-bg_glass_75_80bfff_1x400.png" />
+    <Content Include="style\hcblue\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="style\hcblue\images\ui-bg_highlight-soft_75_0080ff_1x100.png" />
+    <Content Include="style\hcblue\images\ui-bg_inset-soft_0_ffffff_1x100.png" />
+    <Content Include="style\hcblue\images\ui-icons_0080ff_256x240.png" />
+    <Content Include="style\hcblue\images\ui-icons_222222_256x240.png" />
+    <Content Include="style\hcblue\images\ui-icons_ff0000_256x240.png" />
+    <Content Include="style\hcblue\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="style\hcblue\jquery-ui-1.8.11.custom.css" />
+    <Content Include="style\images\calendar.png" />
+    <Content Include="style\twilight\twilight.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about\Privacy.aspx.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about\Privacy.aspx.designer.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="admin\AuthUserManage.aspx.cs">
+      <DependentUpon>AuthUserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AuthUserManage.aspx.designer.cs">
+      <DependentUpon>AuthUserManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AuthUsers.aspx.cs">
+      <DependentUpon>AuthUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AuthUsers.aspx.designer.cs">
+      <DependentUpon>AuthUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Cache.aspx.cs">
+      <DependentUpon>Cache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Cache.aspx.designer.cs">
+      <DependentUpon>Cache.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ClientAdmin.aspx.cs">
+      <DependentUpon>ClientAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ClientAdmin.aspx.designer.cs">
+      <DependentUpon>ClientAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ClientMessage.aspx.cs">
+      <DependentUpon>ClientMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ClientMessage.aspx.designer.cs">
+      <DependentUpon>ClientMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ClientMessageTemplates.aspx.cs">
+      <DependentUpon>ClientMessageTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ClientMessageTemplates.aspx.designer.cs">
+      <DependentUpon>ClientMessageTemplates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Clients.aspx.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Clients.aspx.designer.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CreateInvoice.aspx.cs">
+      <DependentUpon>CreateInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CreateInvoice.aspx.designer.cs">
+      <DependentUpon>CreateInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GetJobStatusIsClosed.aspx.cs">
+      <DependentUpon>GetJobStatusIsClosed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GetJobStatusIsClosed.aspx.designer.cs">
+      <DependentUpon>GetJobStatusIsClosed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InvoiceAdmin.aspx.cs">
+      <DependentUpon>InvoiceAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InvoiceAdmin.aspx.designer.cs">
+      <DependentUpon>InvoiceAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\JobAdmin.aspx.cs">
+      <DependentUpon>JobAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\JobAdmin.aspx.designer.cs">
+      <DependentUpon>JobAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reports\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\reports\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reports\Hits.aspx.cs">
+      <DependentUpon>Hits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\reports\Hits.aspx.designer.cs">
+      <DependentUpon>Hits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\reports\Sessions.aspx.cs">
+      <DependentUpon>Sessions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\reports\Sessions.aspx.designer.cs">
+      <DependentUpon>Sessions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Utilities.aspx.cs">
+      <DependentUpon>Utilities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Utilities.aspx.designer.cs">
+      <DependentUpon>Utilities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\Entities\ClientEx.cs" />
+    <Compile Include="AppCode\Entities\Invoice.cs" />
+    <Compile Include="AppCode\Entities\Invoices.cs" />
+    <Compile Include="AppCode\ObjectComparer.cs" />
+    <Compile Include="client-experience\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client-experience\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client-experience\Slideshow.aspx.cs">
+      <DependentUpon>Slideshow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client-experience\Slideshow.aspx.designer.cs">
+      <DependentUpon>Slideshow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\AddressList.aspx.cs">
+      <DependentUpon>AddressList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\AddressList.aspx.designer.cs">
+      <DependentUpon>AddressList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\ClientUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clients\CompanyList.aspx.cs">
+      <DependentUpon>CompanyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\CompanyList.aspx.designer.cs">
+      <DependentUpon>CompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\GetFile.aspx.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\GetFile.aspx.designer.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\Job.aspx.cs">
+      <DependentUpon>Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\Job.aspx.designer.cs">
+      <DependentUpon>Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\JobSearch.aspx.cs">
+      <DependentUpon>JobSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\JobSearch.aspx.designer.cs">
+      <DependentUpon>JobSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\NewJob.aspx.cs">
+      <DependentUpon>NewJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\NewJob.aspx.designer.cs">
+      <DependentUpon>NewJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clients\TimeZoneHelper.aspx.cs">
+      <DependentUpon>TimeZoneHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clients\TimeZoneHelper.aspx.designer.cs">
+      <DependentUpon>TimeZoneHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ConversionEditingOptionsHelp.ascx.cs">
+      <DependentUpon>ConversionEditingOptionsHelp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ConversionEditingOptionsHelp.ascx.designer.cs">
+      <DependentUpon>ConversionEditingOptionsHelp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Privacy.ascx.cs">
+      <DependentUpon>Privacy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Privacy.ascx.designer.cs">
+      <DependentUpon>Privacy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\Entities\JobStatusChange.cs" />
+    <Compile Include="AppCode\Entities\Message.cs" />
+    <Compile Include="AppCode\Entities\MessageThread.cs" />
+    <Compile Include="controls\AboutThePrincipal.ascx.cs">
+      <DependentUpon>AboutThePrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\AboutThePrincipal.ascx.designer.cs">
+      <DependentUpon>AboutThePrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AdminControlPanel.ascx.cs">
+      <DependentUpon>AdminControlPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\AdminControlPanel.ascx.designer.cs">
+      <DependentUpon>AdminControlPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AppCode\Entities\AlertMethod.cs" />
+    <Compile Include="AppCode\Entities\Address.cs" />
+    <Compile Include="AppCode\Admin.cs" />
+    <Compile Include="AppCode\CacheLayer.cs" />
+    <Compile Include="AppCode\Entities\AuthenticationUser.cs" />
+    <Compile Include="AppCode\Entities\Client.cs" />
+    <Compile Include="AppCode\ClientData.cs" />
+    <Compile Include="AppCode\Entities\Company.cs" />
+    <Compile Include="AppCode\Emailer.cs" />
+    <Compile Include="AppCode\Entities\Employee.cs" />
+    <Compile Include="AppCode\HcFooter.cs" />
+    <Compile Include="AppCode\HcHeader.cs" />
+    <Compile Include="AppCode\Entities\Job.cs" />
+    <Compile Include="AppCode\Entities\JobFile.cs" />
+    <Compile Include="AppCode\Entities\JobSegment.cs" />
+    <Compile Include="AppCode\Entities\JobStatus.cs" />
+    <Compile Include="AppCode\Entities\JobType.cs" />
+    <Compile Include="AppCode\PageInfo.cs" />
+    <Compile Include="AppCode\SessionUpdater.cs" />
+    <Compile Include="AppCode\SiteData.cs" />
+    <Compile Include="AppCode\HitHandler.cs" />
+    <Compile Include="AppCode\SiteUtils.cs" />
+    <Compile Include="controls\Agreements.ascx.cs">
+      <DependentUpon>Agreements.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Agreements.ascx.designer.cs">
+      <DependentUpon>Agreements.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ClientControlPanel.ascx.cs">
+      <DependentUpon>ClientControlPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\ClientControlPanel.ascx.designer.cs">
+      <DependentUpon>ClientControlPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="contact\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\HalfHourDropDown.ascx.cs">
+      <DependentUpon>HalfHourDropDown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\HalfHourDropDown.ascx.designer.cs">
+      <DependentUpon>HalfHourDropDown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demos\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demos\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\GetEmployeeDateTime.aspx.cs">
+      <DependentUpon>GetEmployeeDateTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\GetEmployeeDateTime.aspx.designer.cs">
+      <DependentUpon>GetEmployeeDateTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\GetFile.aspx.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\GetFile.aspx.designer.cs">
+      <DependentUpon>GetFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\JobSearchAdmin.aspx.cs">
+      <DependentUpon>JobSearchAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\JobSearchAdmin.aspx.designer.cs">
+      <DependentUpon>JobSearchAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\Work.aspx.cs">
+      <DependentUpon>Work.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employees\Work.aspx.designer.cs">
+      <DependentUpon>Work.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login\Handler.aspx.cs">
+      <DependentUpon>Handler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login\Handler.aspx.designer.cs">
+      <DependentUpon>Handler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewClient\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewClient\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="scripts\SessionValuesUpdater.aspx.cs">
+      <DependentUpon>SessionValuesUpdater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="scripts\SessionValuesUpdater.aspx.designer.cs">
+      <DependentUpon>SessionValuesUpdater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="style\hcblue\StyleHelpers.cs" />
+    <Compile Include="trace\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trace\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="admin\uploads\jobs\1082\in\CiP20000.000" />
+    <None Include="admin\uploads\jobs\1088\in\agreement-to-convert.pdf" />
+    <None Include="admin\uploads\jobs\1088\in\sample-agreement.docx" />
+    <None Include="admin\uploads\jobs\1088\out\agreement-to-convert-hc-01.docx" />
+    <None Include="admin\uploads\jobs\1089\in\agreement-markup.pdf" />
+    <None Include="admin\uploads\jobs\1089\out\agreement-markup-hc-01.docx" />
+    <None Include="admin\uploads\jobs\1089\out\some.docx" />
+    <None Include="admin\uploads\jobs\1098\out\some.docx" />
+    <Content Include="admin\web.config" />
+    <None Include="favicons\h-2012-09-08.psd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ventaur.WebPageSecurity.v3x.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="trace\Default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="admin\uploads\jobs\1084\in\" />
+    <Folder Include="admin\uploads\jobs\1098\in\" />
+    <Folder Include="admin\uploads\trash\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58273</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

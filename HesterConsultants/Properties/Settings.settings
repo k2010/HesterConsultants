@@ -1,0 +1,254 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HesterConsultants.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="JobStatusCompletedId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="JobStatusCanceledId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="JobStatusDeclinedId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="JobTypeOtherId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="JobStatusSubmittedId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="JobStatusInProgressId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="JobFilesRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/admin/uploads/jobs</Value>
+    </Setting>
+    <Setting Name="SmtpHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">relay-hosting.secureserver.net</Value>
+    </Setting>
+    <Setting Name="CompanyDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">hesterconsultants.com</Value>
+    </Setting>
+    <Setting Name="CompanyUrlShort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">www.hesterconsultants.com</Value>
+    </Setting>
+    <Setting Name="CompanyStartYear" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2010</Value>
+    </Setting>
+    <Setting Name="SiteCookieName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">hcv2</Value>
+    </Setting>
+    <Setting Name="VisitorCookieName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">vid</Value>
+    </Setting>
+    <Setting Name="ClientLoginUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/login/</Value>
+    </Setting>
+    <Setting Name="ClientHomeUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/clients/Home.aspx</Value>
+    </Setting>
+    <Setting Name="ClientAccountUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/clients/Account.aspx</Value>
+    </Setting>
+    <Setting Name="AdminHomeUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/admin/</Value>
+    </Setting>
+    <Setting Name="EmployeeHomeUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/employees/</Value>
+    </Setting>
+    <Setting Name="LocalServerNames" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mopac,rr2222</Value>
+    </Setting>
+    <Setting Name="CustomerServiceEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">postmaster@hesterconsultants.com</Value>
+    </Setting>
+    <Setting Name="CompanyTimeZoneId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Central Standard Time</Value>
+    </Setting>
+    <Setting Name="CompanyPhoneMain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">[phone]</Value>
+    </Setting>
+    <Setting Name="CompanyPhoneTechSupport" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">[phone]</Value>
+    </Setting>
+    <Setting Name="DevLanIpAddressLeft" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">192.168</Value>
+    </Setting>
+    <Setting Name="DevLocalhostIpAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="ContactUploadsPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/admin/uploads/mail</Value>
+    </Setting>
+    <Setting Name="RoleAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Admin</Value>
+    </Setting>
+    <Setting Name="RoleEmployee" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Employee</Value>
+    </Setting>
+    <Setting Name="RoleClient" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Client</Value>
+    </Setting>
+    <Setting Name="RoleNewClient" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NewClient</Value>
+    </Setting>
+    <Setting Name="RoleUnauthenticatedClient" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UnauthenticatedClient</Value>
+    </Setting>
+    <Setting Name="FilenameAppendedDigitsMax" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="JobStatusCompletedName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Completed</Value>
+    </Setting>
+    <Setting Name="RecentJobsNumberOfDays" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="CompanyContactPhone" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">[phone]</Value>
+    </Setting>
+    <Setting Name="CompanyContactTitle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Principal</Value>
+    </Setting>
+    <Setting Name="CompanyNameDefinedTerm" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Hester</Value>
+    </Setting>
+    <Setting Name="CompanyContactTextEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">[text]</Value>
+    </Setting>
+    <Setting Name="CompanyContactName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ken Hester</Value>
+    </Setting>
+    <Setting Name="CompanyContactEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ken.hester@hesterconsultants.com</Value>
+    </Setting>
+    <Setting Name="CompanyUrlFull" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.hesterconsultants.com</Value>
+    </Setting>
+    <Setting Name="UseDumbOutlookFormatting" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DefaultEmailFontList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Calibri, Arial, Sans-Serif</Value>
+    </Setting>
+    <Setting Name="EmailUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailPw" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RoleMustChangePassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MustChangePassword</Value>
+    </Setting>
+    <Setting Name="JobSearchStopWordList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">am, an, and, as, at, be, by, can, co, do, for, he, if, in, is, it, me, my, no, not, of, on, or, please, re, she, so, thank, thanks, the, that, this, us, we, you, what, who, why</Value>
+    </Setting>
+    <Setting Name="ChangePasswordUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/clients/ChangePassword.aspx</Value>
+    </Setting>
+    <Setting Name="JobStatusInReviewId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="JobStatusQueuedId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="JobStatusPendingApprovalId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="JobTypeDevelopmentId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="JobTypeConsultingId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="JobTypeConversionId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="JobTypeEditingId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="CompanyName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Hester Consultants LLC</Value>
+    </Setting>
+    <Setting Name="CompanyNameShort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Hester Consultants</Value>
+    </Setting>
+    <Setting Name="ClientProfileUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/clients/Profile.aspx</Value>
+    </Setting>
+    <Setting Name="ClientJobSearchUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/clients/JobSearch.aspx</Value>
+    </Setting>
+    <Setting Name="NewJobUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/clients/NewJob.aspx</Value>
+    </Setting>
+    <Setting Name="LogoutUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/clients/Logout.aspx</Value>
+    </Setting>
+    <Setting Name="ContactUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/contact/</Value>
+    </Setting>
+    <Setting Name="AboutUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/about/</Value>
+    </Setting>
+    <Setting Name="AdminReportsUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/admin/reports/</Value>
+    </Setting>
+    <Setting Name="DemosUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/demos/</Value>
+    </Setting>
+    <Setting Name="ServicesUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/services/</Value>
+    </Setting>
+    <Setting Name="CurrentInvoiceNumberOfDays" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="AdminJobSearchUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/employees/JobSearchAdmin.aspx</Value>
+    </Setting>
+    <Setting Name="TrashFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/admin/uploads/trash</Value>
+    </Setting>
+    <Setting Name="EmailStyleTag" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;style type="text/css"&gt; *, div, p, li, td, a, span {font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 14px;} body {margin: 5px;} div {margin-bottom: 10px;} p {margin-bottom: 10px;} a {color: #0080ff;} a:hover {color: #f37d01;} &lt;/style&gt;</Value>
+    </Setting>
+    <Setting Name="SearchHighlightHtmlTag" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">span style="font-weight: bold;"</Value>
+    </Setting>
+    <Setting Name="CompanySlogan" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Secure Online Legal Support</Value>
+    </Setting>
+    <Setting Name="DefaultAddressId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="DefaultCompanyId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1232</Value>
+    </Setting>
+    <Setting Name="SplashCookieName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">lastSplashDate</Value>
+    </Setting>
+    <Setting Name="DefaultClientId" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1087</Value>
+    </Setting>
+    <Setting Name="DevIspIpAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//</Value>
+    </Setting>
+    <Setting Name="CompanyAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Austin, Texas</Value>
+    </Setting>
+    <Setting Name="DevIpAddressDebugger" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">::1</Value>
+    </Setting>
+    <Setting Name="ReferrerIgnoreRegexs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">^https?:\/\/([^.]+\.)*semalt\.com.*$|^https?:\/\/([^.]+\.)*buttons-for-.*\.com.*$|^https?:\/\/.+makemoneyonline\.com.*$|^https?:\/\/([^.]+\.)*savetubevideo\.com.*$|^https?:\/\/([^.]+\.)*srecorder\.com.*$|^https?:\/\/([^.]+\.)*kambasoft\.com.*$|^https?:\/\/([^.]+\.)*best-seo-.*\.com.*$</Value>
+    </Setting>
+    <Setting Name="ConnString_Visitors" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=PARKROAD22\PARKROAD22SQL;Initial Catalog=hcvisitors;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=PARKROAD22\PARKROAD22SQL;Initial Catalog=hcvisitors;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

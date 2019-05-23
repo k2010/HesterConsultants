@@ -1,0 +1,70 @@
+﻿to do 
+ - *done* getting errors on unknown file types from GetFile.aspx from clients but not from admin???
+
+ - *done* undo the parameterless thing on job.aspx and file.aspx
+ - *done* please add customerservice@... to your contacts (upon signup)
+ - *done* alert for newly signed up client
+
+ - *nah* "Thank you for submitting a job. Please watch your email for our Estimate."
+
+ - *done* use css classes on tr, not td for jobs
+
+ - *done* rework confidentiality to include the whole work request ??
+
+ - *done* check datatable returns (either check for null or always return an empty dt) be consistent
+
+ - *done* look over all validators (dynamic) / take out validation groups
+ - *done* don't let client choose date in past
+ - *n/a* what about liability of individual client vs. company 
+ - *done* alerts (new job request etc.)
+ - *done* check all admin & employee & client pages for CheckUser methods
+ - *nah* when user submits a job, check that their address/phone is not null
+ - *done* messages/feedback
+ - *done* put site-specific stuff in settings
+ - *done* fix the email mess on /contact/
+ - *done* use bool return value on all email operations
+ - *done* put all contact messages in db
+ - *done* centralize error logging
+ - *done* forgot password and all that
+ - *done* try/catch in all data methods
+ - *done* check all page titles
+ - *done* put it hithandler code
+ - *done* remove l2s decorations
+
+ - getting threadabortexception in clientmessagetemplate or clientmessage (and somewhere else...)
+
+ - test ie6, ie7
+ - to save clients from overwriting their own files, use naming convention (append something)
+ - let client view all its jobs
+ - use text sql in all data methods ??
+ - interfaces instead of concrete dependencies where possible
+
+ - make sure you understand when to load children/parents - don't get into circular loading,
+   e.g., get a job -> brings files -> file.job = (calling job) ok, but not file.GetJob()
+   what about Invoice? invoice.GetJobs() -> don't do job.GetInvoice()
+   client.GetInvoices() -> don't do invoice.GetClient()
+
+ - encapsulate stuff that's the same for clients & admins (job lists, job details, get files, etc.)
+ - status indicator on front page ("we're too busy right now")
+ - consider changing "employees" -- don't want "employee" concept ... taxes
+ - factor out file io into service class (with interface (document repository))
+ - ClientFileRetentionPolicy class
+ - have page for messages
+ - cloud storage
+
+12/30/2010 -
+file upload code
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
+            string uploadPath = @"D:\Hosting\6368225\html\uploads\";
+
+            if (File1.PostedFile != null)
+            {
+                string filename = Path.GetFileName(File1.Value);
+                uploadPath += filename;
+                File1.PostedFile.SaveAs(uploadPath);
+            }
+        }
+
+
+

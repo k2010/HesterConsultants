@@ -1,0 +1,1041 @@
+﻿/* html, body, containers --------------------------------------------------------------- */
+/*  backup: 
+    blue: 0 0 a a e e
+    orange f 7 7 f 0 0
+
+    potentials:
+    blue: 0 4 9 4 c d
+            0 1 9 3 c d
+            0 0 8 0 e e 
+            0 0 9 0 e e
+            0 0 8 0 f f
+
+    orange: e 7 7 3 0 d
+*/
+html, body, form
+{
+    height: 100%;
+}
+
+html, body, div, form
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #ffffff;
+    color: #666666;
+    font-size: 100%;
+    line-height: 1.2em;
+}
+
+*, body
+{
+    font-family: Calibri, Arial, Sans-Serif;
+    vertical-align: top;
+}
+
+div
+{
+    font-size: 100%;
+}
+
+p, th, td, li, input, textarea, select, option, fieldset, .text
+{
+    font-size: .9em;
+}
+
+fieldset *, td *, li *
+{
+    font-size: 1em;
+}
+
+input[type=text], input[type=password], input[type=email]
+{
+    width: 250px;
+}
+
+input[type=file]
+{
+    /* font-size: 14px; */
+    font-size: .9em;
+}
+
+sup
+{
+    vertical-align: super;
+    font-size: .85em;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+fieldset
+{
+    padding: 5px;
+}
+
+legend
+{
+    font-weight: bold;
+    color: #666666;
+}
+
+ul
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div#container
+{
+    position: relative;
+    min-height: 100%;
+    margin-bottom: -25px;
+}
+
+div#mainbody
+{
+    /*position: relative;*/
+    /* height: 100%; */
+    margin-left: 20px;
+    padding-bottom: 30px;
+    width: 60%;
+}
+
+div#mainbodyClients
+{
+    position: relative;
+    left: 200px; /* 270px; */
+    /* height: 100%; */
+    margin-left: 20px;
+    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
+    width: auto;
+}
+
+div#mainbody, div#mainbody div, div#mainbody p, div#mainbody li,
+div#mainbodyClients, div#mainbodyClients div, div#mainbodyClients p, div#mainbodyClients li
+{
+    /* line-height: 145%; */
+}
+
+#header
+{
+    height: 85px; /* 100px; */
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-image: url('/style/hcblue/images/hc-blue-grad.png');
+    background-repeat: repeat-y;
+    background-color: #6ab4fd; /* current light blue */
+    border-bottom: solid 1px #cccccc;
+}
+
+div#footer
+{
+    font-size: .8em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    line-height: 1.2em;
+    /*margin-top: 20px;*/
+    border-top: solid 1px #cccccc;
+    background-image: url('/style/hcblue/images/hc-blue-grad.png');
+    background-repeat: repeat-y;
+    background-color: #6ab4fd; /* current light blue */
+}
+
+/* headings --------------------------------------------------------------- */
+
+h1
+{
+    /* font-size: 24px; */
+    font-size: 1.5em;
+    margin: .67em 0;
+    color: #0070e0;
+}
+
+h2
+{
+    /* font-size: 20px; */
+    font-size: 1.25em;
+}
+
+h3
+{
+    /* font-size: 18px; */
+    font-size: 1.1em;
+}
+
+h4, h5, h6, h7
+{
+    /* font-size: 16px; */
+    font-size: 1em;
+}
+
+
+/* navigation --------------------------------------------------------------- */
+
+#topNav
+{
+    /* font-size: 16px; */
+    font-size: .9em;
+    color: #ffffff;
+    margin-left: 22px;
+    margin-top: 8px;
+}
+
+#topNav a
+{
+    /* font-size: 16px; */
+    color: #ffffff;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+#topNav a:hover
+{
+    text-decoration: underline; 
+    /* border-bottom: solid 1px #ffffff; */
+}
+
+span.activeNavLink
+{
+    /* font-size: 16px; */
+    color: #d0d0e0;
+    /* border-bottom: solid 1px #c0c0ff; */
+    vertical-align: baseline;
+}
+
+.loginTop
+{
+    float: right;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.privacyBottom
+{
+    float: right;
+    margin-right: 20px;
+}
+
+/* tables --------------------------------------------------------------- */
+
+table
+{
+    border-collapse: collapse;
+}
+
+th
+{
+    text-align: left;
+}
+
+td.tableLabelRightAligned
+{
+    text-align: right;
+    white-space: nowrap;
+    padding-right: 4px;
+}
+
+/* links --------------------------------------------------------------- */
+
+a:link, a:visited, a:active
+{
+    color: #0080ff; /* current blue */
+}
+
+a:hover
+{
+    color: #f37d01; /* #d95900; */ /* current orange */
+}
+
+a img
+{
+    border: none;
+}
+
+/* logo items --------------------------------------------------------------- */
+
+div#logoContainer
+{
+    padding-top: 20px;
+    padding-bottom: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: solid 1px #ffffff;
+}
+
+span#logo
+{
+    /* font-size: 36px; */
+    font-size: 1.8em;
+    color: #ffffff;
+    /* vertical-align: bottom; */
+    vertical-align: baseline;
+}
+
+#logo a
+{
+    /* font-size: 36px; */
+    color: #ffffff;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+span#slogan
+{
+    /* font-size: 16px; */
+    color: #dddddd;
+    margin-left: 20px;
+    vertical-align: baseline;
+}
+
+#certs
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    /* margin-top: 10px; */
+    /*margin-bottom: 10px;*/
+    padding-top: 0;
+    padding-bottom: 30px;
+    border-top: solid 1px #0080ff;
+    /*border-bottom: solid 1px #0080ff;*/
+}
+
+div.address
+{
+    font-size: .8em;
+    margin-bottom: 15px;
+    line-height: 1.1em;
+}
+
+div.address span.nameTitle
+{
+    /* font-size: 1em; */
+    color: #d95900;
+}
+
+div.address, div.address p, div.address div
+{
+    /* line-height: 120%; */
+    /* font-size: 12px; */
+    color: #666666; 
+}
+
+#mainbody div.address *
+{
+    /* line-height: 110%; */
+}
+
+div.address a
+{
+    /* font-size: 12px; */
+    /* line-height: 120%; */
+    color: #0080ff;
+}
+
+div.address a:hover
+{
+    color: #d95900;
+}
+
+div#copyright
+{
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* font-size: 11px; */
+    font-size: .9em;
+    color: #dddddd;
+    border: none;
+}
+
+div#copyright a
+{
+    /* font-size: 11px; */
+    color: #dddddd;
+    text-decoration: none;
+}
+
+/* splash items --------------------------------------------------------------- */
+
+.homeSplash
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    line-height: 130%;
+    border: solid 1px #f37d01;
+    
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    
+    -moz-box-shadow:  0 5px 10px #f37d01;
+    -webkit-box-shadow:  0 5px 10px #f37d01;
+    box-shadow:  0 5px 10px #f37d01;    
+}
+
+.homeSplash h1
+{
+    margin-top: 0;
+}
+
+.homeSplash div
+{
+    font-size: 20px;
+    line-height: 130%;
+}
+
+.news
+{
+    margin-left: -5px;
+    margin-top: 10px;
+    padding: 5px;
+    border: solid 1px #f37d01; /* #0080ff; */
+    border-radius: 10px;
+    box-shadow:  0 5px 10px #f37d01;    
+    /* background-color: #ffffe0; */
+}
+
+.newSplash
+{
+    border: solid 2px #0080ff;
+    /* font-size: 36px; */
+}
+
+.newSplash *
+{
+    /* font-size: 36px; */
+}
+
+/* services ---------------------------------------------------------------------- */
+
+div.servicePanel
+{
+    /* 
+    margin: 20px;
+    padding: 10px;
+    */
+    width: 900px;
+    padding: 10px;
+    border: solid 1px #cccccc;
+    margin-bottom: 20px;
+}
+
+.servicePanelLeft
+{
+    float: left;
+    margin-right: 20px;
+}
+
+div.servicePanelService
+{
+    width: 440px;
+}
+
+div.servicePanelNotes
+{
+    position: absolute;
+    left: 500px;
+    top: 10px; /* same as servicePanel padding-top */
+}
+
+div.servicePanel h2
+{
+    margin-top: 0;
+}
+
+div.servicePanel h3, div.servicePanel h4
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.servicePanel table.servicePanelTwoColumn td.rightColumn
+{
+    padding-left: 20px;
+}
+
+div#servicePanelDp
+{
+    /* not in use
+    position: absolute;
+    left: 30px;
+    top: 160px;
+    */
+}
+
+div#servicePanelConsulting
+{
+    /* not in use
+    position: absolute;
+    left: 30px;
+    top: 650px;
+    */
+}
+
+h2.serviceHeading
+{
+    color: #008800;
+}
+
+h3.serviceHeading
+{
+    color: #009900;
+}
+
+table.feeTable
+{
+    width: 400px;
+}
+
+table.feeTable td
+{
+    border-bottom: solid 1px #cccccc;
+}
+
+table.feeTable td.dollarFee
+{
+    width: 50px;
+    padding-left: 10px;
+    text-align: right;
+}
+
+/* demos ---------------------------------------------------------------------- */
+
+.videoBox
+{
+    padding: 0;
+    border: solid 1px #0080ff;
+}
+
+.videoCaption
+{
+    margin-top: 5px;
+}
+
+h2.demoHeading
+{
+    color: #008b45; /* #00cd66; a little light */
+    /* border-top: solid 1px #008b45; */
+    margin-top: 30px;
+}
+
+/* contact ---------------------------------------------------------------------- */
+
+div#pnlContactTableContainer
+{
+    position: relative;
+    border-right: solid 1px #0080ff; /* #d95900; */
+    border-top: solid 1px #0080ff; /* #d95900; */
+    border-bottom: solid 1px #0080ff; /* #d95900; */
+    width: 95%;
+}
+
+div#pnlAddressContainer
+{
+    /* position: relative;
+    top: 320px; */
+}
+
+div#contactFileInputsContainer
+{
+    position: relative;
+    left: 65px;
+}
+
+div#contactErrorMessage
+{
+    position: relative;
+    left: 177px;
+    min-height: 30px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#tblContact
+{
+    position: relative;
+    left: 110px;
+}
+
+.pnlBtnSendMessage
+{
+    position: absolute;
+    left: 20px;
+}
+
+.bigButton
+{
+    width: 75px;
+    height: 75px;
+}
+
+#pnlContactAttachments
+{
+    position: relative;
+    left: 100px;
+    margin: 20px;
+    width: 80%;
+}
+
+#pnlContactAttachmentsNote
+{
+    margin-bottom: 10px;
+}
+
+#moreFileInputsMessage
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-right: 110px;
+}
+
+#pnlContactSendAnother
+{
+    display: none;
+}
+
+/* clients ------------------------------------------------------------------ */
+table.loginTable table *
+{
+    font-family: Calibri, Arial, Sans-Serif;
+    /* font-size: 16px; */
+    /* line-height: 145%; */
+}
+
+table.loginTable table td
+{
+    padding: 2px;
+}
+
+div#clientWorkPanel
+{
+    width: 85%;
+}
+
+div.clientControlPanel
+{
+    /* float: right; */
+    position: absolute;
+    /* right: 0; */
+    left: 0;
+    top: 86px;
+    width: 160px; /* 230px; */
+    height: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: solid 1px #cccccc; 
+    /* border-left: solid 1px #cccccc; */
+    background-image: url('/style/hcblue/images/hc-gray-grad-small.png');
+    /* url('/style/hcblue/images/hc-blue-grad-small.png'); */
+    /* url('/style/hcblue/images/hc-orange-grad.png'); */
+    background-repeat: repeat-y;
+    background-color: #c0c8cf; /* #6ab4fd; */ /*#f2bb80;  #e0f3e0; */
+}
+
+div.adminControlPanel
+{
+    background-image: url('/style/hcblue/images/hc-green-grad.png');
+    background-repeat: repeat-y;
+    background-color: #a3dcba;
+}
+
+.clientControlPanel *, .clientControlPanel a
+{
+    color: #ffffff;
+}
+
+.clientControlPanel a
+{
+    text-decoration: none;
+}
+
+.clientControlPanel a:hover
+{
+    text-decoration: underline;
+}
+
+.clientControlPanelHr
+{
+    margin-bottom: 6px; 
+    margin-top: 8px; 
+    border-top: solid 1px #ffffff;
+}
+
+input.searchText
+{
+    width: 150px; 
+    color: #666666; 
+}
+
+input.searchButton
+{
+    color: #000000;
+}
+
+span.asteriskRequiredField
+{
+    color: #ff0000;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+table.newUserWizardTable 
+{
+    width: 420px;
+}
+
+table.newUserWizardTable table
+{
+    width: 100%;
+}
+
+table.newUserWizardTable *
+{
+    /* line-height: 145%; */
+}
+
+table.newUserWizardTable td
+{
+    padding: 2px;
+}
+
+table.openJobs
+{
+    width: 100%;
+}
+
+table.openJobs th, table.openJobs td
+{
+    padding: 2px;
+    padding-right: 10px;
+    border-bottom: solid 1px #cccccc;
+}
+
+table.clientSegmentsTable
+{
+    width: 90%;
+}
+
+table.clientSegmentsTable th
+{
+    font-weight: normal;
+    padding-right: 4px;
+    border-bottom: solid 1px #cccccc;
+}
+
+table.clientSegmentsTable td
+{
+    padding-right: 4px;
+    border-bottom: solid 1px #cccccc;
+}
+
+div.pnlJobFormContainer
+{
+    width: 95%;
+}
+
+div.bigLogin
+{
+    display: table-cell;
+    width: 200px;
+    height: 70px;
+    border: solid 1px #cccccc;
+    text-align: center;
+    vertical-align: middle;
+    background: url('/style/hcblue/images/hc-gray-button-bg.png');
+    cursor: pointer;
+}
+
+span.innerBigLogin
+{
+    /* font-size: 18px; */
+    width: 100%;
+}
+
+span.innerBigLogin a
+{
+    text-decoration: none;
+}
+
+span.innerBigLogin a:hover
+{
+    color: #0080ff;
+}
+
+.jobStatusSubmitted, tr.jobStatusSubmitted td
+{
+    background-color: #ffffaa;
+}
+
+.jobStatusCompleted, tr.jobStatusCompleted td
+{
+    background-color: #bbffbb; 
+}
+
+.jobStatusCanceled, tr.jobStatusCanceled td, 
+.jobStatusDeclined, tr.jobStatusDeclined td
+{
+    background-color: #dddddd;
+}
+
+.jobStatusQueued, tr.jobStatusQueued td, 
+.jobStatusInProgress, tr.jobStatusInProgress td, 
+.jobStatusPendingApproval, tr.jobStatusPendingApproval td
+{
+    background-color: #e8efff;
+}
+
+tr.pastDueModerate td
+{
+    color: #f37d01;
+}
+
+tr.pastDueCritical td
+{
+    color: #ff0000;
+}
+
+tr.totalRow td
+{
+    border-top: solid 1px #cccccc;
+}
+
+div.securitySeal
+{
+    /* position: absolute;
+    left: 20px;
+    bottom: 0; */
+}
+
+/* employees ------------------------------------------------------------------ */
+tr.openJobSegment td
+{
+    background-color: #e8efff;
+}
+
+tr.openJobSegment td *
+{
+    /* color: #ffffff; */
+}
+
+
+/* reports -------------------------------------------------------------------- */
+
+p.pageHeading
+{
+    color: #0080ff;
+    border-bottom: solid 1px #cccccc;
+}
+
+tr.headingRow, th.headingRow
+{
+    background-color: #0080ff;
+    color: #ffffff;
+}
+
+tr.alternatingRow
+{
+    background-color: #cccccc;
+}
+
+div#reports
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+}
+
+table.reports
+{
+    border-collapse: collapse;
+}
+
+
+.spacer20px
+{
+    width: 20px;
+}
+
+/* ideas ------------------------------------------------------------------ */
+
+.asterisk
+{
+    color: #00aa00;
+}
+
+.maybe
+{
+    color: #ff9900;
+}
+
+.comment
+{
+    color: #ff0000;
+}
+
+.catchPhrase
+{
+    color: #0080ff;
+}
+
+.alertText
+{
+    color: #ff0000;
+}
+
+/* utilities ------------------------------------------------------------------ */
+
+.bold
+{
+    font-weight: bold;
+}
+
+.indent5px
+{
+    margin-left: 5px;
+}
+
+.indent10px
+{
+    margin-left: 10px;
+}
+
+.indent15px
+{
+    margin-left: 15px;
+}
+
+.indent20px
+{
+    margin-left: 20px;
+}
+
+.indent25px
+{
+    margin-left: 25px;
+}
+
+.indent30px
+{
+    margin-left: 30px;
+}
+
+.indent35px
+{
+    margin-left: 35px;
+}
+
+.indent40px
+{
+    margin-left: 40px;
+}
+
+.indent45px
+{
+    margin-left: 45px;
+}
+
+.indent50px
+{
+    margin-left: 50px;
+}
+
+.marginTop10px
+{
+    margin-top: 10px;
+}
+
+.marginTop20px
+{
+    margin-top: 20px;
+}
+
+.marginTop30px
+{
+    margin-top: 30px;
+}
+
+.marginBottom20px
+{
+    margin-bottom: 20px;
+}
+
+.footnote
+{
+    margin-top: 20px;
+    padding-top: 5px;
+    border-top: solid 1px #cccccc;
+}
+
+.noWrap
+{
+    white-space: nowrap;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.center
+{
+    text-align: center;
+}
+
+span.dateline
+{
+    font-weight: bold;
+}
+
+.errorMessage
+{
+    color: #ff0000;
+}
+
+.caution, .caution *
+{
+    color: #f37d01;
+}
+
+.gentleHelpText
+{
+    color: #0080ff;
+}
+
+/* ads --------------------------------------------------------------- */
+
+#adPanelRight
+{
+    font-size: .9em;
+    float: right;
+    margin: 20px;
+    margin-top: 55px;
+    padding-left: 20px;
+    border-left: solid 1px #cccccc;
+}
+
+#adPanelBottom
+{
+    font-size: .9em;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 35px;
+}
+
+.adHeading
+{
+    color: #999999;
+    margin-bottom: 20px;
+}
+
